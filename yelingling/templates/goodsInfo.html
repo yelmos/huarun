@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>商品详情</title>
-    <link rel="stylesheet" href="../css/goodsInfo.css">
-    <link rel="stylesheet" href="../css/iconfont.css">
-    <link rel="stylesheet" href="../css/iconfont.woff">
-    <script type="text/javascript" src="../js/jquery-1.12.0.js"></script>
-    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
-    <script type="text/javascript" src="../js/goodsInfo.js"></script>
+    <link rel="stylesheet" href="/static/css/goodsInfo.css">
+    <link rel="stylesheet" href="/static/css/iconfont.css">
+    <link rel="stylesheet" href="/static/css/iconfont.woff">
+    <script type="text/javascript" src="/static/js/jquery-1.12.0.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/static/js/goodsInfo.js"></script>
 </head>
 <body>
     <div class="head">
@@ -18,22 +19,22 @@
             </div>
             <div class="head_nav">
                 <ul class="head_nav_ul">
-                    <li><a href="login.html">登录</a></li>
+                    <li><a href="{% url 'huarun:login' %}">登录</a></li>
                     <li class="line">|</li>
-                    <li><a href="register.html"  class="reg">注册</a></li>
+                    <li><a href="{% url 'huarun:register' %}"  class="reg">注册</a></li>
                     <li><a href="">我的优惠券</a></li>
                     <li class="line">|</li>
-                    <li><a href="">我的订单</a></li>
+                    <li><a href="#">我的订单</a></li>
                     <li class="line">|</li>
                     <li class="head_nav_phone_li">
-                        <img src="../images/14840063.png" alt="">
+                        <img src="/static/images/14840063.png" alt="">
                         手机e万家
-                        <img src="../images/14840030.png">
+                        <img src="/static/images/14840030.png">
                     </li>
                     <li class="line leftLine">|</li>
                     <li class="head_nav_last_li">
                         <a href="">
-                            <img src="../images/14840018.png" alt="">
+                            <img src="/static/images/14840018.png" alt="">
                             <span>大客户阳光直采频道</span>
                         </a>
                     </li>
@@ -58,7 +59,7 @@
     <div class="head_body">
         <div class="head_body_center">
             <div class="head_body_center_l">
-                <a href=""><img src="../images/4312385.png" alt=""></a>
+                <a href=""><img src="/static/images/4312385.png" alt=""></a>
             </div>
             <div class="head_body_center_c">
                 <div class="search">
@@ -76,8 +77,8 @@
                 </ul>
             </div>
             <div class="head_body_center_r">
-                <span><img src="../images/3020025.png" alt=""></span>
-                <a href="">购物车 <span id="goodCartsNum">0</span> 件商品</a>
+                <span><img src="/static/images/3020025.png" alt=""></span>
+                <a href="{% url 'huarun:goodcart' %}">购物车 <span id="goodCartsNum">0</span> 件商品</a>
             </div>
         </div>
     </div>
@@ -87,89 +88,89 @@
                 <ul class="head_body_nav_list_ul">
                     <li class="first">
                         商品分类
-                        <img src="../images/14840044.png">
+                        <img src="/static/images/14840044.png">
                     </li>
                     <li>
                         <a href="">
                             <i class="iconfont">&#xe637;</i>
-                            <span><img src="../images/3020021.png" alt=""></span>
+                            <span><img src="/static/images/3020021.png" alt=""></span>
                             产地直采
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <i class="iconfont">&#xe65b;</i>
-                            <span><img src="../images/3020021.png" alt=""></span>
+                            <span><img src="/static/images/3020021.png" alt=""></span>
                             时令果蔬
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <i class="iconfont">&#xe66c;</i>
-                            <span><img src="../images/3020021.png" alt=""></span>
+                            <span><img src="/static/images/3020021.png" alt=""></span>
                             肉禽蛋品
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <i class="iconfont">&#xe65d;</i>
-                            <span><img src="../images/3020021.png" alt=""></span>
+                            <span><img src="/static/images/3020021.png" alt=""></span>
                             水产海鲜
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <i class="iconfont">&#xe663;</i>
-                            <span><img src="../images/3020021.png" alt=""></span>
+                            <span><img src="/static/images/3020021.png" alt=""></span>
                             乳品面点
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <i class="iconfont">&#xe64b;</i>
-                            <span><img src="../images/3020021.png" alt=""></span>
+                            <span><img src="/static/images/3020021.png" alt=""></span>
                             粮油干货
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <i class="iconfont">&#xe64d;</i>
-                            <span><img src="../images/3020021.png" alt=""></span>
+                            <span><img src="/static/images/3020021.png" alt=""></span>
                             零食酒饮
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <i class="iconfont">&#xe653;</i>
-                            <span><img src="../images/3020021.png" alt=""></span>
+                            <span><img src="/static/images/3020021.png" alt=""></span>
                             母婴呵护
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <i class="iconfont">&#xe63f;</i>
-                            <span><img src="../images/3020021.png" alt=""></span>
+                            <span><img src="/static/images/3020021.png" alt=""></span>
                             个护美妆
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <i class="iconfont">&#xe647;</i>
-                            <span><img src="../images/3020021.png" alt=""></span>
+                            <span><img src="/static/images/3020021.png" alt=""></span>
                             家居日用
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <i class="iconfont">&#xe66b;</i>
-                            <span><img src="../images/3020021.png" alt=""></span>
+                            <span><img src="/static/images/3020021.png" alt=""></span>
                             厨具电器
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <i class="iconfont">&#xe63d;</i>
-                            <span><img src="../images/3020021.png" alt=""></span>
+                            <span><img src="/static/images/3020021.png" alt=""></span>
                             地方特产
                         </a>
                     </li>
@@ -177,7 +178,7 @@
                 <div class="nav_c_list" id="nav_list_2">
                     <ul class="list">
                         <li>
-                            <span class="tittle"><a href="">新鲜水果</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">新鲜水果</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">应季畅销</a></span>
                             <span class="item"><a href="">进口水果</a></span>
                             <span class="item"><a href="">国产水果</a></span>
@@ -188,17 +189,17 @@
                 <div class="nav_c_list" id="nav_list_3">
                     <ul class="list">
                         <li>
-                            <span class="tittle"><a href="">肉类制品</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">肉类制品</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">熟食肉禽</a></span>
                             <span class="item"><a href="">腊肠/腊肉</a></span>
                             <span class="item"><a href="">肉丸</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">猪牛羊肉</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">猪牛羊肉</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">鲜/冻牛羊肉</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">禽蛋类</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">禽蛋类</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">蛋品</a></span>
                             <span class="item"><a href="">禽类</a></span>
                         </li>
@@ -207,23 +208,23 @@
                 <div class="nav_c_list" id="nav_list_4">
                     <ul class="list">
                         <li>
-                            <span class="tittle"><a href="">虾蟹类</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">虾蟹类</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">虾</a></span>
                             <span class="item"><a href="">蟹</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">参贝类</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">参贝类</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">贝类</a></span>
                             <span class="item"><a href="">海参</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">鱼类</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">鱼类</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">进口鱼类</a></span>
                             <span class="item"><a href="">国产鱼类</a></span>
                             <span class="item"><a href="">三文鱼</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">其他水产</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">其他水产</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">其他水产</a></span>
                         </li>
                     </ul>
@@ -231,16 +232,16 @@
                 <div class="nav_c_list" id="nav_list_5">
                     <ul class="list">
                         <li>
-                            <span class="tittle"><a href="">面包糕点</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">面包糕点</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">生日蛋糕</a></span>
                             <span class="item"><a href="">烘焙点心</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">米面食品</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">米面食品</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">小吃点心</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">甜品小菜</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">甜品小菜</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">风味小菜</a></span>
                         </li>
                     </ul>
@@ -248,20 +249,20 @@
                 <div class="nav_c_list" id="nav_list_6">
                     <ul class="list">
                         <li>
-                            <span class="tittle"><a href="">粮油米面</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">粮油米面</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">油</a></span>
                             <span class="item"><a href="">米</a></span>
                             <span class="item"><a href="">面条粉丝</a></span>
                             <span class="item"><a href="">五谷杂粮</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">南北干货</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">南北干货</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">菌菇类</a></span>
                             <span class="item"><a href="">干海产</a></span>
                             <span class="item"><a href="">煲汤料</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">厨房调料</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">厨房调料</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">酱油</a></span>
                             <span class="item"><a href="">醋</a></span>
                             <span class="item"><a href="">调味汁</a></span>
@@ -269,7 +270,7 @@
                             <span class="item"><a href="">调味酱</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">方便食品</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">方便食品</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">方便面/粉/粥</a></span>
                             <span class="item"><a href="">火腿肠</a></span>
                             <span class="item"><a href="">罐头食品</a></span>
@@ -279,14 +280,14 @@
                 <div class="nav_c_list" id="nav_list_7">
                     <ul class="list">
                         <li>
-                            <span class="tittle"><a href="">月饼</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">月饼</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">传统月饼</a></span>
                             <span class="item"><a href="">冰皮月饼</a></span>
                             <span class="item"><a href="">冰淇淋月饼</a></span>
                             <span class="item"><a href="">月饼券</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">休闲零食</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">休闲零食</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">坚果</a></span>
                             <span class="item"><a href="">海味零食</a></span>
                             <span class="item"><a href="">果冻/零食</a></span>
@@ -295,13 +296,13 @@
                             <span class="item"><a href="">薯片/香脆小食</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">糖果</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">糖果</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">硬糖软糖</a></span>
                             <span class="item"><a href="">巧克力</a></span>
                             <span class="item"><a href="">口香糖</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">饼干曲奇</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">饼干曲奇</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">甜味/咸味饼干</a></span>
                             <span class="item"><a href="">威化饼干</a></span>
                             <span class="item"><a href="">曲奇</a></span>
@@ -309,7 +310,7 @@
                             <span class="item"><a href="">无糖食品</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">冲饮茗茶</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">冲饮茗茶</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">咖啡/奶茶/可可类冲调</a></span>
                             <span class="item"><a href="">麦片/玉米片/芝麻糊</a></span>
                             <span class="item"><a href="">茶叶/花茶/袋泡茶</a></span>
@@ -321,7 +322,7 @@
                             <span class="item"><a href="">香烟</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">滋补保健</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">滋补保健</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">滋补养生</a></span>
                             <span class="item"><a href="">骨骼健康</a></span>
                             <span class="item"><a href="">美容养颜</a></span>
@@ -333,7 +334,7 @@
                             <span class="item"><a href="">增强免疫</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">酒品</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">酒品</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">洋酒</a></span>
                             <span class="item"><a href="">葡萄酒</a></span>
                             <span class="item"><a href="">滋补酒/黄酒</a></span>
@@ -343,7 +344,7 @@
                             <span class="item"><a href="">酒具</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">饮料水</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">饮料水</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">茶饮料</a></span>
                             <span class="item"><a href="">运动健康饮料</a></span>
                             <span class="item"><a href="">醋饮料</a></span>
@@ -357,21 +358,21 @@
                 <div class="nav_c_list" id="nav_list_8">
                     <ul class="list">
                         <li>
-                            <span class="tittle"><a href="">母婴食品</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">母婴食品</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">婴幼奶粉</a></span>
                             <span class="item"><a href="">婴儿辅食</a></span>
                             <span class="item"><a href="">婴儿保健</a></span>
                             <span class="item"><a href="">孕期营养</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">尿布湿巾</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">尿布湿巾</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">湿巾</a></span>
                             <span class="item"><a href="">婴儿尿裤</a></span>
                             <span class="item"><a href="">拉拉裤</a></span>
                             <span class="item"><a href="">成人尿裤</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">洗护用品</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">洗护用品</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">宝宝洗浴</a></span>
                             <span class="item"><a href="">宝宝护肤</a></span>
                             <span class="item"><a href="">洗衣液/皂</a></span>
@@ -384,7 +385,7 @@
                             <span class="item"><a href="">理发器</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">喂养用品</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">喂养用品</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">辅食料理机</a></span>
                             <span class="item"><a href="">奶瓶奶嘴</a></span>
                             <span class="item"><a href="">暖奶消毒</a></span>
@@ -394,7 +395,7 @@
                             <span class="item"><a href="">吸奶器</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">童床童车</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">童床童车</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">婴儿推车</a></span>
                             <span class="item"><a href="">安全座椅</a></span>
                             <span class="item"><a href="">婴儿床</a></span>
@@ -415,13 +416,13 @@
                             <span class="item"><a href="">鞋类</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">妈妈专区</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">妈妈专区</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">妈咪包/背婴带</a></span>
                             <span class="item"><a href="">孕产妇服饰</a></span>
                             <span class="item"><a href="">孕产妇洗护</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">玩具</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">玩具</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">遥控/电动</a></span>
                             <span class="item"><a href="">毛绒布艺</a></span>
                             <span class="item"><a href="">益智玩具</a></span>
@@ -434,10 +435,10 @@
                 <div class="nav_c_list" id="nav_list_9">
                     <ul class="list">
                         <li>
-                            <span class="tittle"><a href="">轻奢直邮</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">轻奢直邮</a><img src="/static/images/50446.png" alt=""></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">美发护发</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">美发护发</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">洗发</a></span>
                             <span class="item"><a href="">护发</a></span>
                             <span class="item"><a href="">染发</a></span>
@@ -447,7 +448,7 @@
                             <span class="item"><a href="">电吹风/理发器</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">面部护理</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">面部护理</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">清洁</a></span>
                             <span class="item"><a href="">护肤</a></span>
                             <span class="item"><a href="">面膜</a></span>
@@ -455,7 +456,7 @@
                             <span class="item"><a href="">套装</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">身体护理</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">身体护理</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">沐浴</a></span>
                             <span class="item"><a href="">润肤</a></span>
                             <span class="item"><a href="">手足</a></span>
@@ -465,7 +466,7 @@
                             <span class="item"><a href="">其他</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">口腔护理</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">口腔护理</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">牙膏/牙粉</a></span>
                             <span class="item"><a href="">牙刷/牙线</a></span>
                             <span class="item"><a href="">漱口水</a></span>
@@ -479,7 +480,7 @@
                             <span class="item"><a href="">脱毛膏/脱毛器</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">香水彩妆</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">香水彩妆</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">香水</a></span>
                             <span class="item"><a href="">底妆</a></span>
                             <span class="item"><a href="">腮红</a></span>
@@ -489,13 +490,13 @@
                             <span class="item"><a href="">美容工具</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">成人用品</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">成人用品</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">测孕</a></span>
                             <span class="item"><a href=""> 避孕</a></span>
                             <span class="item"><a href=""> 情趣用品</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">男士护理</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">男士护理</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">男士美发护发</a></span>
                             <span class="item"><a href="">男士面部护理</a></span>
                             <span class="item"><a href="">男士身体护理</a></span>
@@ -506,7 +507,7 @@
                 <div class="nav_c_list" id="nav_list_10">
                     <ul class="list">
                         <li>
-                            <span class="tittle"><a href="">纸品湿巾</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">纸品湿巾</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">卷纸</a></span>
                             <span class="item"><a href="">抽纸</a></span>
                             <span class="item"><a href="">湿纸巾</a></span>
@@ -514,7 +515,7 @@
                             <span class="item"><a href="">厨房用纸</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">衣物清洁</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">衣物清洁</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">洗衣液/粉</a></span>
                             <span class="item"><a href="">消毒液/除菌剂</a></span>
                             <span class="item"><a href="">柔顺剂</a></span>
@@ -523,7 +524,7 @@
                             <span class="item"><a href="">洗衣皂</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">家庭清洁</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">家庭清洁</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">洗手液</a></span>
                             <span class="item"><a href="">洗洁精</a></span>
                             <span class="item"><a href="">油污净</a></span>
@@ -538,7 +539,7 @@
                             <span class="item"><a href="">吸湿防蛀</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">清洁工具</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">清洁工具</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">扫把拖把</a></span>
                             <span class="item"><a href="">抹布百洁布</a></span>
                             <span class="item"><a href="">垃圾桶/袋</a></span>
@@ -562,7 +563,7 @@
                             <span class="item"><a href="">F&F服装</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">办公户外</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">办公户外</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">书写工具</a></span>
                             <span class="item"><a href="">本册便签</a></span>
                             <span class="item"><a href="">桌面文具</a></span>
@@ -572,7 +573,7 @@
                             <span class="item"><a href="">旅行必备</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">五金工具</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">五金工具</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">电池</a></span>
                             <span class="item"><a href="">灯具插座</a></span>
                             <span class="item"><a href="">五金卫浴</a></span>
@@ -582,7 +583,7 @@
                 <div class="nav_c_list" id="nav_list_11">
                     <ul class="list">
                         <li>
-                            <span class="tittle"><a href="">厨房电器</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">厨房电器</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">电磁炉</a></span>
                             <span class="item"><a href="">电饭煲/电热饭盒</a></span>
                             <span class="item"><a href="">电压力锅</a></span>
@@ -599,7 +600,7 @@
                             <span class="item"><a href="">咖啡机</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">生活电器</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">生活电器</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">生活电器</a></span>
                             <span class="item"><a href="">取暖电器</a></span>
                             <span class="item"><a href="">净水设备</a></span>
@@ -614,7 +615,7 @@
                             <span class="item"><a href="">干衣机</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">个护健康</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">个护健康</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">美容器</a></span>
                             <span class="item"><a href="">电动牙刷</a></span>
                             <span class="item"><a href="">剃须刀</a></span>
@@ -629,7 +630,7 @@
                             <span class="item"><a href="">计步器</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">厨房烹饪</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">厨房烹饪</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">烹饪锅具</a></span>
                             <span class="item"><a href="">刀剪砧板</a></span>
                             <span class="item"><a href="">铲勺筷叉</a></span>
@@ -637,7 +638,7 @@
                             <span class="item"><a href="">烘焙烧烤</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">餐饮用具</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">餐饮用具</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">餐具</a></span>
                             <span class="item"><a href="">保鲜餐盒</a></span>
                             <span class="item"><a href="">保温杯壶</a></span>
@@ -645,33 +646,33 @@
                             <span class="item"><a href="">酒具</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">厨房配件</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">厨房配件</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">保鲜用品</a></span>
                             <span class="item"><a href="">储物置物</a></span>
                             <span class="item"><a href="">一次性用品</a></span>
                             <span class="item"><a href="">厨房工具</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">手机数码</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">手机数码</a><img src="/static/images/50446.png" alt=""></span>
                             <span class="item"><a href="">平板电脑/电子书</a></span>
                             <span class="item"><a href="">手机</a></span>
                             <span class="item"><a href="">笔记本电脑</a></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">家电保养</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">家电保养</a><img src="/static/images/50446.png" alt=""></span>
                         </li>
                     </ul>
                 </div>
                 <div class="nav_c_list" id="nav_list_12">
                     <ul>
                         <li>
-                            <span class="tittle"><a href="">上海</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">上海</a><img src="/static/images/50446.png" alt=""></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">湖南</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">湖南</a><img src="/static/images/50446.png" alt=""></span>
                         </li>
                         <li>
-                            <span class="tittle"><a href="">福建</a><img src="../images/50446.png" alt=""></span>
+                            <span class="tittle"><a href="">福建</a><img src="/static/images/50446.png" alt=""></span>
                         </li>
                     </ul>
                 </div>
@@ -692,45 +693,45 @@
                 <a href="index.html">首页</a>
                 <span class="arrow"></span>
             </div>
-            <div class="good_info">
+           <div class="good_info">
                 <div class="info_left">
                     <div class="good_img">
                         <img src="" alt="">
-                        <div class="move"></div>
+                        <div class="move" style="display: none; left: 260px; top: 280px;"></div>
                     </div>
                     <div class="small_img">
-                        <div class="scrollbutton smallImgUp ico">&#xe670;</div>
+                        <div class="scrollbutton smallImgUp ico"></div>
                         <div class="imgMenu">
-                            <ul>
-                                <li class="cur"><img src="" alt=""></li>
-                                <li><img src="" alt=""></li>
-                                <li><img src="" alt=""></li>
-                                <li><img src="" alt=""></li>
-                                <li><img src="" alt=""></li>
+                            <ul style="margin-left: 0px;">
+                                <li class=""><img src="{{ newsgood.smallimg1 }}" alt=""></li>
+                                <li class=""><img src="{{ newsgood.smallimg2 }}" alt=""></li>
+                                <li class=""><img src="{{ newsgood.smallimg3 }}" alt=""></li>
+                                <li class="cur"><img src="{{ newsgood.smallimg4 }}" alt=""></li>
+                                <li class=""><img src="{{ newsgood.smallimg5 }}" alt=""></li>
                             </ul>
                         </div>
-                        <div class="scrollbutton smallImgDown ico disabled">&#xe671;</div>
+                        <div class="scrollbutton smallImgDown ico disabled"></div>
                     </div>
-                    <div class="bigimg">
-                        <div style="position: absolute">
-                            <img src="" alt="">
+                    <div class="bigimg" style="display: none;">
+                        <div style="position: absolute; left: -258.762px; top: -278.667px;">
+                            <img src="{{ newsgood.bigimg }}" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="info_right">
-                    <span class="name"></span>
-                    <span class="name"></span>
+                    <span class="name">{{ newsgood.name }}</span>
+                    <span class="name">Caudalie Moisturizing Toner 200ml</span>
                     <span class="introduce">
                         <div style="margin-right: 12px; float: left">
-                            <img src="../images/France.png" style="width: 20px;height: 20px;">
+                            <img src="/static/images/France.png" style="width: 20px;height: 20px;">
                         </div>
                         <div style="height: 20px; line-height: 20px;">法国|保税</div>
                     </span>
-                    <span class="introduce"></span>
+                    <span class="introduce">{{ newsgood.intro }}</span>
                     <div class="money">
                         含税价
                         <p class="textPrimary">
-                            ¥<strong></strong>.00
+                            ¥<strong>{{ newsgood.price }}</strong>.00
                         </p>
                         <div id="valoremBox" style="display: inline-block;position: relative;">
                             <p class="valoremTax">
@@ -757,13 +758,13 @@
                         <span class="lat">有货</span>
                     </div>
                     <div class="buttom">
-                        <a href="" class="toCar">
+                        <a href="" class="toCar" id="1" type="newGoods" style="background: rgb(225, 64, 65);">
                             <i class="ico"></i>
                             <span>加入购物车</span>
                         </a>
-                        <a href="" class="like">
+                        <a href="" class="like" style="border: 1px solid rgb(209, 209, 209);">
                             <i></i>
-                            <span>收藏</span>
+                            <span style="color: rgb(51, 51, 51);">收藏</span>
                         </a>
                     </div>
                     <div class="dt_lins tips">
@@ -855,15 +856,15 @@
                             </div>
                             <ul>
                                 <li>
-                                    <img src="../images/pinjia1.png" alt="">
+                                    <img src="/static/images/pinjia1.png" alt="">
                                     好评<span>(1人)</span>
                                 </li>
                                 <li>
-                                    <img src="../images/pinjia2.png" alt="">
+                                    <img src="/static/images/pinjia2.png" alt="">
                                     中评<span>(0人)</span>
                                 </li>
                                 <li>
-                                    <img src="../images/pinjia3.png" alt="">
+                                    <img src="/static/images/pinjia3.png" alt="">
                                     差评<span>(0人)</span>
                                 </li>
                             </ul>
@@ -903,23 +904,23 @@
         <div class="foot_top">
             <ul>
                 <li>
-                    <img src="../images/3020017.png" alt="">
+                    <img src="/static/images/3020017.png" alt="">
                     <span class="fl">7X24小时营业<br>全年无休</span>
                 </li>
                 <li>
-                    <img src="../images/3020010.png" alt="">
+                    <img src="/static/images/3020010.png" alt="">
                     <span class="fl">全国服务热线<br>400-883-1984</span>
                 </li>
                 <li>
-                    <img src="../images/3020008.png" alt="">
+                    <img src="/static/images/3020008.png" alt="">
                     <span class="fl">华润配送<br>全程冷链</span>
                 </li>
                 <li>
-                    <img src="../images/3020006.png" alt="">
+                    <img src="/static/images/3020006.png" alt="">
                     <span class="fl">正品保障<br>100%正品</span>
                 </li>
                 <li>
-                    <img src="../images/3020014.png" alt="">
+                    <img src="/static/images/3020014.png" alt="">
                     <span class="fl">当日下单<br>次日到达</span>
                 </li>
             </ul>

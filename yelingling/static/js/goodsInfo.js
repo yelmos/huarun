@@ -9,7 +9,7 @@ $(function(){
     var types = str[1];
 
   //动态创建
-    $.getJSON('../json/'+types+'.json',function(data){
+    $.getJSON('/static/json/'+types+'.json',function(data){
         for (var i=0;i<data.length;i++){
             var obj = data[i];
             var id = obj.id;

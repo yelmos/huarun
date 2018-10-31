@@ -7,5 +7,6 @@ urlpatterns = [
     url(r'^login/$',login,name='login'),
     url(r'^register/$',register,name='register'),
     url(r'^goodcart/$',goodcart,name='goodcart'),
-    url(r'^goodsInfo/$',goodsInfo,name='goodsInfo'),
+    url(r'^goodsInfo/(\d+)/$',newsgoods,name='goodsInfo'),
+    url(r'^logout/$',logout,name='logout'),
 ]

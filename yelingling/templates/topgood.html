@@ -3,85 +3,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>主页</title>
-    <link rel="stylesheet" href="/static/css/index_css.css">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="/static/css/goodsInfo.css">
     <link rel="stylesheet" href="/static/css/iconfont.css">
     <link rel="stylesheet" href="/static/css/iconfont.woff">
     <script type="text/javascript" src="/static/js/jquery-1.12.0.js"></script>
     <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
-    <script type="text/javascript" src="/static/js/index.js"></script>
+    <script type="text/javascript" src="/static/js/goodsInfo.js"></script>
 </head>
 <body>
-    <div class="louti">
-        <ul class="nav_lift">
-            <li class="entry lt01">
-                <a class="topyc" id="yc0" style="display: none" href="">抢</a>
-                <a class="topxs" id="xs0" style="display: block" href="">
-                    限时抢购
-                </a>
-            </li>
-            <li class="entry lt02">
-                <a class="topyc" id="yc1" href="">尖</a>
-                <a class="topxs" id="xs1" href="">
-                    尖货推荐
-                </a>
-            </li>
-            <li class="entry lt03">
-                <a class="topyc" id="yc2" href="">新</a>
-                <a class="topxs" id="xs2" href="">
-                    上新品
-                </a>
-            </li>
-            <li class="entry lt04">
-                <a class="topyc" id="yc3" href="">
-                    1F
-                </a>
-                <a class="topxs" id="xs3" href="">
-                    跨境精选
-                </a>
-            </li>
-            <li class="entry lt05">
-                <a class="topyc" id="yc4" href="">
-                    2F
-                </a>
-                <a class="topxs" id="xs4" href="">
-                    Enjoy City
-                </a>
-            </li>
-            <li class="entry lt06" >
-                <a class="topyc" id="yc5" href="">
-                    3F
-                </a>
-                <a class="topxs" id="xs5" href="">
-                    产地直采
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="cart">
-        <ul class="cartLayer">
-            <li class="count"><a href="{% url 'huarun:goodcart' %}" class="numCar">0</a></li>
-            <li class="entry entry01 active"><a href="{% url 'huarun:goodcart' %}"></a></li>
-            <li class="entry entry02"><a href=""></a></li>
-            <li class="entry entry03 go_top"><a href=""></a></li>
-        </ul>
-    </div>
     <div class="head">
         <div class="head_center">
             <div class="headLogin">
-                <span id="user">您好</span> {{ name }}, 欢迎来<span id="headLogin_name">e万家</span> !
-
+                <span id="user">您好</span> , 欢迎来<span id="headLogin_name">e万家</span> !
             </div>
             <div class="head_nav">
                 <ul class="head_nav_ul">
-                     <li><a href="{% url 'huarun:logout' %}">注销</a></li>
-                     <li class="line">|</li>
                     <li><a href="{% url 'huarun:login' %}">登录</a></li>
                     <li class="line">|</li>
                     <li><a href="{% url 'huarun:register' %}"  class="reg">注册</a></li>
                     <li><a href="">我的优惠券</a></li>
                     <li class="line">|</li>
-                    <li><a href="">我的订单</a></li>
+                    <li><a href="#">我的订单</a></li>
                     <li class="line">|</li>
                     <li class="head_nav_phone_li">
                         <img src="/static/images/14840063.png" alt="">
@@ -135,12 +78,11 @@
             </div>
             <div class="head_body_center_r">
                 <span><img src="/static/images/3020025.png" alt=""></span>
-                <a href="goodcart.html">购物车 <span id="goodCartsNum">0</span> 件商品</a>
+                <a href="{% url 'huarun:goodcart' %}">购物车 <span id="goodCartsNum">0</span> 件商品</a>
             </div>
         </div>
     </div>
-    <div class="head_body_nav"
-    >
+    <div class="head_body_nav">
         <div class="head_body_nav_c">
             <div class="head_body_nav_list">
                 <ul class="head_body_nav_list_ul">
@@ -745,393 +687,216 @@
             </ul>
         </div>
     </div>
-    <div class="body_img">
-        <ul class="body_img_ul">
-
-                {% for lunbo in lunbos %}
-                <li><a href=""><img src="{{ lunbo.src }}" alt="" class="first"></a></li>
-                {% endfor %}
-
-            <!--<li><a href=""><img src="../images/15411519.jpg" alt="" class="first"></a></li>-->
-            <!--<li><a href=""><img src="../images/15411442.jpg" alt=""></a></li>-->
-            <!--<li><a href=""><img src="../images/15411372.jpg" alt=""></a></li>-->
-            <!--<li><a href=""><img src="../images/15401767.jpg" alt=""></a></li>-->
-        </ul>
-        <ul class="body_img_ul_2">
-<li class="active"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-    <div class="center_body">
-        <div class="center_body_now">
-            <div class="tittle_list">
-                <div class="tittle_logo"></div>
-                <div class="time_box">
-                    <i></i>
-                    <div class="tb_icon">
-                        <img src="/static/images/14840035.png" alt="">
+    <div class="good_body">
+        <div class="good_body_c">
+            <div class="body_top">
+                <a href="index.html">首页</a>
+                <span class="arrow"></span>
+            </div>
+           <div class="good_info">
+                <div class="info_left">
+                    <div class="good_img">
+                        <img src="/static/images/15411604_420x420.jpg" alt="">
+                        <div class="move" style="display: none; left: 260px; top: 280px;"></div>
                     </div>
-                    <div class="time_box_clock">
-                        <span class="label">剩余时间 : </span>
-                        <span class="num day1">0</span>
-                        <span class="num day2">1</span>
-                        <em>天</em>
-                        <span class="num hour1">2</span>
-                        <span class="num hour2">3</span>
-                        <em>时</em>
-                        <span class="num minute1">1</span>
-                        <span class="num minute2">9</span>
-                        <em>分</em>
+                    <div class="small_img">
+                        <div class="scrollbutton smallImgUp ico"></div>
+                        <div class="imgMenu">
+                            <ul style="margin-left: 0px;">
+                                <li class=""><img src="{{ newsgood.smallimg1 }}" alt=""></li>
+                                <li class=""><img src="{{ newsgood.smallimg2 }}" alt=""></li>
+                                <li class=""><img src="{{ newsgood.smallimg3 }}" alt=""></li>
+                                <li class="cur"><img src="{{ newsgood.smallimg4 }}" alt=""></li>
+                                <li class=""><img src="{{ newsgood.smallimg5 }}" alt=""></li>
+                            </ul>
+                        </div>
+                        <div class="scrollbutton smallImgDown ico disabled"></div>
+                    </div>
+                    <div class="bigimg" style="display: none;">
+                        <div style="position: absolute; left: -258.762px; top: -278.667px;">
+                            <img src="{{ newsgood.bigimg }}" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="shop_cont">
-                <ul>
-                    {% for qianggou in qianggous %}
-                    <li class="newGoodsList" >
-                        <div class="mask">
-                            <a href="" class="img_view">
-                              <img src="{{ qianggou.src }}" alt="" height="258" width="258">
-                                <div class="jx_box">
-                                    <i><img src="/static/images/Australia.png" width="18" height="18"></i>
-                                   <span>澳大利亚|保税</span>
-                                </div>
-                          </a>
-                            <div class="bottom">
-                               <div class="shop_info">
-                                    <div class="shop_name">
-                                        <a class="qcnameStyle" href=""><span>{{ qianggou.name }}</span></a>
-                                        <p class="intro"><a class="qcpointStyle" href="">{{ qianggou.intro }}</a></p>
-                                   </div>
-                               </div>
-                               <div class="shop_pri"><span><em>¥&nbsp;</em>{{ qianggou.price }}<em>.00</em></span><s>¥&nbsp;139.00</s></div>
-                           </div>
-                       </div>
-                    </li>
-                    {% endfor %}
-
-
-                </ul>
-            </div>
-        </div>
-        <div class="shop_top">
-            <div class="shop_top_head">
-                <div class="shop_top_head_l">
-                    <img src="/static/images/14840028.png" alt="">
-                </div>
-            </div>
-            <div class="shop_top_body">
-                <ul class="shop_top_body_ul">
-                    {% for topgood in topgoods %}
-                       <li>
-                        <div class="mask">
-                            <a href="" class="shop_top_body_ul_a">
-                                <img src="{{ topgood.src }}" alt="" width="100%">
-                               <div class="jx_box">
-                                    <i><img src="/static/images/14810860.png" alt="" width="18" height="18"></i>
-                                   <span>万家精选</span>
-                               </div>
-                               <div class="tag">
-                                    <img src="/static/images/14810859.png" alt="">
-                                </div>
-                            </a>
-                           <div class="bottom">
-                                <div class="shop_name">
-                                   <a href="">{{ topgood.name }}</a>
-                              </div>
-                                <p class="info">
-                                    <a href="">
-                                     {{ topgood.intro }}
-                                  </a>
-                               </p>
-                               <p class="price">
-                                   <span>¥<strong style="margin-left: 4px;">{{ topgood.price }}</strong>.00</span>
-                                    <s style="font-size: 12px;">¥&nbsp;<strong style="font-size: 14px;">196</strong>.00</s>
-                                </p>
-                          </div>
-                       </div>
-                    </li>
-                    {% endfor %}
-
-
-                </ul>
-            </div>
-        </div>
-        <div class="shop_new">
-            <div class="shop_new_top">
-                <div class="shop_new_top_l">
-                    <img src="/static/images/14840058.png" alt="">
-                </div>
-            </div>
-            <div class="shop_new_body">
-                <ul class="shop_new_body_ul">
-                    {% for newsgood in newsgoods %}
-                      <li class="newGoods">
-                        <div class="mask">
-                            <a href="{% url 'huarun:goodsInfo' newsgood.id %}" class="img_view">
-                                <img src="{{ newsgood.src }}" alt="" width="280" height="280">
-                               <span class="isNewSq"></span>
-                                <div class="tag">
-                                    <img src="/static/images/14810858.png" alt="">
-                               </div>
-                            </a>
-                           <div class="bottom">
-                                <div class="jj_box">
-                                    <i><img src="/static/images/America.png" alt="" width="18" height="18"></i>
-                                    <span>美国|保税</span>
-                                </div>
-                                <div class="shop_name">
-                                    <a href="">{{ newsgood.name }}</a>
-                                </div>
-                                <p class="intro">
-                                   <a href="">
-                                       {{ newsgood.intro }}
-                                   </a>
-                                </p>
-                                <p class="textPrimary price"><span>¥<strong style="margin-left: 4px;">{{ newsgood.price }}</strong>.00</span></p>
-                                <div class="btn_box"><a href="" onclick="">加入购物车</a><div class="s_join"><i class="white_arrow"></i><i class="icon_tick"></i><span class="gocar">已成功加入购物车</span></div></div>
-                           </div>
-                       </div>
-                    </li>
-                    {% endfor %}
-
-
-                </ul>
-            </div>
-        </div>
-        <div class="floor floor1">
-            <div class="floor_top">
-                <div class="floor_top_l">
-                    <a href=""><img src="/static/images/15210019.png" alt=""></a>
-                </div>
-                <div class="floor_top_nav">
-                    <ul>
-                        <li><a href="">个护美妆</a></li>
-                        <li><span class="line">|</span></li>
-                        <li><a href="">母婴呵护</a></li>
-                        <li><span class="line">|</span></li>
-                        <li><a href="">营养保健</a></li>
-                        <li><span class="line">|</span></li>
-                        <li><a href="">精选食品</a></li>
-                        <li><span class="line">|</span></li>
-                        <li><a href="">家居日用</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="floor_body">
-                <div class="floor_body_a">
-                    <a href="" class="more">
-                        <img src="/static/images/15400232.png" alt="">
-                    </a>
-                    <div class="listTags">
-                        <ul>
-                            <li><a href="">嘉宝辅食</a></li>
-                            <li><a href="">家庭清洁</a></li>
-                            <li><a href="">美容养颜</a></li>
-                            <li><a href="">补水面膜</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="floor_body_b">
-                    <a href="">
-                        <img src="/static/images/15400231.png" alt="">
-                    </a>
-                </div>
-                <div class="floor_body_c">
-                    <ul class="floor_body_ul">
-
-{% for kuajin in kuajins %}
-                         <li class="newGoods">
-                            <div class="mask">
-                                <a href="" class="img_view">
-                                    <img src="{{ kuajin.src }}" alt="" width="180" height="180">
-                                    <span class="isSq"></span>
-                                    <div class="tag">
-                                        <img src="/static/images/14810858.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="bottom">
-                                    <div class="jx_box">
-                                        <i><img src="/static/images/France.png" alt="" width="18" height="18"></i>
-                                        <span>法国|直邮</span>
-                                    </div>
-                                    <div class="shop_name"><a href="">{{ kuajin.name }}</a></div>
-                                    <p class="intro">
-                                       <a href="">
-                                       {{ kuajin.intro }}
-                                        </a>
-                                   </p>
-                                    <p class="textPrimary price"><span>¥<strong style="margin-left: 4px;">{{ kuajin.price }}</strong>.00</span></p>
-                                    <div class="btn_box"><a href="">加入购物车</a><div class="s_join"><i class="white_arrow"></i><i class="icon_tick"></i><span class="gocar">已成功加入购物车</span></div></div>
-                               </div>
+                <div class="info_right">
+                    <span class="name">{{ newsgood.name }}</span>
+                    <span class="name">Caudalie Moisturizing Toner 200ml</span>
+                    <span class="introduce">
+                        <div style="margin-right: 12px; float: left">
+                            <img src="/static/images/France.png" style="width: 20px;height: 20px;">
+                        </div>
+                        <div style="height: 20px; line-height: 20px;">法国|保税</div>
+                    </span>
+                    <span class="introduce">{{ newsgood.intro }}</span>
+                    <div class="money">
+                        含税价
+                        <p class="textPrimary">
+                            ¥<strong>{{ newsgood.price }}</strong>.00
+                        </p>
+                        <div id="valoremBox" style="display: inline-block;position: relative;">
+                            <p class="valoremTax">
+                                <strong>价税说明</strong>
+                                <a class="vtArrow">▽</a>
+                            </p>
+                            <div class="valoremTaxBox">
+                                <p>含税价 = 税前价￥133.15 + 税额￥15.85<br>其中税额含国家规定的应缴增值税和消费税额</p>
                             </div>
-                        </li>
-                        {% endfor %}
+                        </div>
+                    </div>
+                    <div class="quantity">
+                        <span class="title">数量</span>
+                        <a class="less"></a>
+                        <input class="quantity_txt" value="1">
+                        <a class="add"></a>
+                        <span class="kucun">库存:83&nbsp;</span>
+                    </div>
+                    <div class="ads">
+                        <span class="title">送至</span>
+                        <div class="ads_list">
 
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="floor floor2">
-            <div class="floor_top">
-                <div class="floor_top_l">
-                    <a href=""><img src="/static/images/15210017.png" alt=""></a>
-                </div>
-                <div class="floor_top_nav">
-                    <ul>
-                        <li><a href="">吃享主义</a></li>
-                        <li><span class="line">|</span></li>
-                        <li><a href="">心水好物</a></li>
-                        <li><span class="line">|</span></li>
-                        <li><a href="">安全护驾</a></li>
-                        <li><span class="line">|</span></li>
-                        <li><a href="">茶歇精品</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="floor_body">
-                <div class="floor_body_a">
-                    <a href="" class="more">
-                        <img src="/static/images/15400235.png" alt="">
-                    </a>
-                    <div class="listTags">
-                        <ul>
-                            <li><a href="">华润五丰</a></li>
-                            <li><a href="">温馨床品</a></li>
-                            <li><a href="">厨房焕新</a></li>
-                            <li><a href="">宝贝天地</a></li>
-                        </ul>
+                        </div>
+                        <span class="lat">有货</span>
+                    </div>
+                    <div class="buttom">
+                        <a href="" class="toCar" id="1" type="newGoods" style="background: rgb(225, 64, 65);">
+                            <i class="ico"></i>
+                            <span>加入购物车</span>
+                        </a>
+                        <a href="" class="like" style="border: 1px solid rgb(209, 209, 209);">
+                            <i></i>
+                            <span style="color: rgb(51, 51, 51);">收藏</span>
+                        </a>
+                    </div>
+                    <div class="dt_lins tips">
+                        <span class="title">【温馨提示】</span>
+                        <span class="info">此商品暂不支持货到付款/积分/预付卡；根据监管要求，跨境商品需海关审核，将与ewj主站商品分单配送</span>
                     </div>
                 </div>
-                <div class="floor_body_b">
-                    <a href="">
-                        <img src="/static/images/15220178.png" alt="">
-                    </a>
-                </div>
-                <div class="floor_body_c">
-                    <ul class="floor_body_ul">
-        {% for enjoycity in enjoycitys %}
-                         <li class="newGoods">
-                            <div class="mask">
-                                <a href="" class="img_view">
-                                    <img src="{{ enjoycity.src }}" alt="" width="180" height="180">
-                                    <span class="isSq"></span>
-                                    <div class="tag">
-                                        <img src="/static/images/14810858.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="bottom">
-                                    <div class="jx_box">
-                                        <i><img src="/static/images/France.png" alt="" width="18" height="18"></i>
-                                        <span>法国|直邮</span>
-                                    </div>
-                                    <div class="shop_name"><a href="">{{ enjoycity.name }}</a></div>
-                                    <p class="intro">
-                                       <a href="">
-                                       {{ enjoycity.intro }}
-                                        </a>
-                                   </p>
-                                    <p class="textPrimary price"><span>¥<strong style="margin-left: 4px;">{{ enjoycity.price }}</strong>.00</span></p>
-                                    <div class="btn_box"><a href="">加入购物车</a><div class="s_join"><i class="white_arrow"></i><i class="icon_tick"></i><span class="gocar">已成功加入购物车</span></div></div>
-                               </div>
-                            </div>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
             </div>
-        </div>
-        <div class="floor floor3">
-            <div class="floor_top">
-                <div class="floor_top_l">
-                    <a href=""><img src="/static/images/15210018.png" alt=""></a>
-                </div>
-                <div class="floor_top_nav">
-                    <ul>
-                        <li><a href="">鲜果干果</a></li>
-                        <li><span class="line">|</span></li>
-                        <li><a href="">水产海鲜</a></li>
-                        <li><span class="line">|</span></li>
-                        <li><a href="">肉禽蛋品</a></li>
-                        <li><span class="line">|</span></li>
-                        <li><a href="">地方特产</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="floor_body">
-                <div class="floor_body_a">
-                    <a href="" class="more">
-                        <img src="/static/images/15220181.png" alt="">
-                    </a>
-                    <div class="listTags">
-                        <ul>
-                            <li><a href="">金异奇果</a></li>
-                            <li><a href="">大闸蟹券</a></li>
-                            <li><a href="">鲜冻虾仁</a></li>
-                            <li><a href="">丘处鸡蛋</a></li>
-                        </ul>
+            <div class="left">
+                <div class="nav_list">
+                    <span class="title2">相关分类</span>
+                    <div class="list">
+                        <a href="">清洁</a>
+                        <a href="">护肤</a>
+                        <a href="">面膜</a>
+                        <a href="">眼部</a>
+                        <a href="">套装</a>
                     </div>
                 </div>
-                <div class="floor_body_b">
-                    <a href="">
-                        <img src="/static/images/15220180.png" alt="">
-                    </a>
+            </div>
+            <div class="right">
+                <div class="right_nav">
+                    <a href="" class="active">商品介绍</a>
+                    <a href="">规格及包装</a>
+                    <a href="">售后服务</a>
+                    <a href="">评价</a>
+                    <a href="">商品问答</a>
                 </div>
-                <div class="floor_body_c">
-                    <ul class="floor_body_ul">
-{% for fresh in freshs %}
-                         <li class="newGoods">
-                            <div class="mask">
-                                <a href="" class="img_view">
-                                    <img src="{{ fresh.src }}" alt="" width="180" height="180">
-                                    <span class="isSq"></span>
-                                    <div class="tag">
-                                        <img src="/static/images/14810858.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="bottom">
-                                    <div class="jx_box">
-                                        <i><img src="/static/images/France.png" alt="" width="18" height="18"></i>
-                                        <span>法国|直邮</span>
-                                    </div>
-                                    <div class="shop_name"><a href="">{{ fresh.name }}</a></div>
-                                    <p class="intro">
-                                       <a href="">
-                                       {{ enjoycity.intro }}
-                                        </a>
-                                   </p>
-                                    <p class="textPrimary price"><span>¥<strong style="margin-left: 4px;">{{ fresh.price }}</strong>.00</span></p>
-                                    <div class="btn_box"><a href="">加入购物车</a><div class="s_join"><i class="white_arrow"></i><i class="icon_tick"></i><span class="gocar">已成功加入购物车</span></div></div>
-                               </div>
+                <div class="right_meg">
+                    <div class="meg_div meg_div_0"><img src="" alt=""></div>
+                    <div class="meg_div meg_div_1" style="display: none">
+                        <table class="modelTable" width="870">
+                            <tbody>
+                            <tr>
+                                <td class="title" width="130"><p>净重/净含量/片状数/抽数：</p></td>
+                                <td class="desc">200ml</td>
+                            </tr>
+                            <tr>
+                                <td class="title" width="130"><p>商品成分：</p></td>
+                                <td class="desc">红酒酵母、葡萄籽精华、玫瑰花精华、迷迭香精油、透明质酸</td>
+                            </tr>
+                            <tr>
+                                <td class="title" width="130"><p>品牌归属国别：</p></td>
+                                <td class="desc">France</td>
+                            </tr>
+                            <tr>
+                                <td class="title" width="130"><p>生产地：</p></td>
+                                <td class="desc">法国</td>
+                            </tr>
+                            <tr>
+                                <td class="title" width="130"><p>使用说明/注意事项：</p></td>
+                                <td class="desc">保存在阴凉通风处，避免阳光直射，若皮肤出现异常现象，请立即停止使用。</td>
+                            </tr>
+                            <tr>
+                                <td class="title" width="130"><p>打包个数：</p></td>
+                                <td class="desc">单个</td>
+                            </tr>
+                            <tr>
+                                <td class="title" width="130"><p>净含量：</p></td>
+                                <td class="desc">200ml</td>
+                            </tr>
+                            <tr>
+                                <td class="title" width="130"><p>类型：</p></td>
+                                <td class="desc">爽肤水/化妆水</td>
+                            </tr>
+                            <tr>
+                                <td class="title" width="130"><p>适合肤质：</p></td>
+                                <td class="desc">任何肤质</td>
+                            </tr>
+                            <tr>
+                                <td class="title" width="130"><p>产地：</p></td>
+                                <td class="desc">法国</td>
+                            </tr>
+                            <tr>
+                                <td class="title" width="130"><p>是否进口：</p></td>
+                                <td class="desc">进口</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="meg_div meg_div_2"></div>
+                    <div class="meg_div meg_div_3"></div>
+                    <div class="meg_div meg_div_4"></div>
+                    <div class="ass">
+                        <div class="ass_top">
+                            <div class="rate">
+                                <strong>100<span class="fz18">%</span></strong><br>
+                                <span>好评度</span>
                             </div>
-                        </li>
-                        {% endfor %}
-                    </ul>
+                            <ul>
+                                <li>
+                                    <img src="/static/images/pinjia1.png" alt="">
+                                    好评<span>(1人)</span>
+                                </li>
+                                <li>
+                                    <img src="/static/images/pinjia2.png" alt="">
+                                    中评<span>(0人)</span>
+                                </li>
+                                <li>
+                                    <img src="/static/images/pinjia3.png" alt="">
+                                    差评<span>(0人)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ass_body">
+                            <div class="comment-type">
+                                <ul id="evaluation">
+                                    <li>
+                                        <i class="ico active"></i>
+                                        <span>全  部<em>(1条)</em></span>
+                                    </li>
+                                    <li>
+                                        <i class="ico"></i>
+                                        <span>好 评<em>(1条)</em></span>
+                                    </li>
+                                    <li>
+                                        <i class="ico"></i>
+                                        <span>中 评<em>(0条)</em></span>
+                                    </li>
+                                    <li>
+                                        <i class="ico"></i>
+                                        <span>差 评<em>(0条)</em></span>
+                                    </li>
+                                    <li>
+                                        <i class="ico"></i>
+                                        <span>晒 单<em>(0条)</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="recentBox">
-            <div class="rTitle">
-                <div class="tt">
-                    <span>浏览历史</span>
-                    <em class="down_icon"></em>
-                </div>
-            </div>
-            <div class="rBody">
-                <ul class="clearfix">
-                    <!--<li>-->
-                        <!--<div class="mask">-->
-                            <!--<a href="">-->
-                                <!--<img src="../images/13340273_140X140.jpg" alt="" width="140" height="140">-->
-                                <!--<div class="s_name" title="【全国配送】奔腾（POVOS）PE1080手持家用挂烫机">-->
-                                    <!--【全国配送】奔腾（POVOS）PE1080手持家用挂烫机-->
-                                <!--</div>-->
-                            <!--</a>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                </ul>
             </div>
         </div>
     </div>

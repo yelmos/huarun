@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,23 +31,23 @@
         <div class="login_body">
             <a href="" class="img_a"><img src="/static/images/15401900.jpg" alt=""></a>
             <div class="login_body_r">
-                <form action="{% url 'huarun:login' %}" method="post" enctype="multipart/form-data">
+                <form action="{% url 'huarun:login' %}" method="post" >
                       {% csrf_token %}
                     <p>
                         <label>登录名：</label>
-                        <input placeholder="邮箱/用户名/已验证手机" class="input" id="username">
-                        <span class="reg_span"></span>
+                        <input placeholder="邮箱/用户名/已验证手机" class="input" id="username" name="username1">
+                        <span class="reg_span">{{ msg }}</span>
                     </p>
                     <p>
                         <label>密码：</label>
-                        <input type="password" placeholder="请输入您的密码" class="input" id="password">
+                        <input type="password" placeholder="请输入您的密码" class="input" id="password" name="password1">
                         <span class="reg_span"></span>
                     </p>
                     <p>
                         <label>验证码：</label>
-                        <input  placeholder="请填写验证码" class="text_input" id="text">
+                        <input  placeholder="请填写验证码" class="text_input" id="text" >
                         <span class="text_input_span"></span>
-                        <a href="" class="text_input_a">看不清，换一张？</a>
+                        <a href="" class="text_input_a">看不清，换一张？ </a>
                         <span class="reg_span"></span>
                     </p>
                     <p class="checkbox_p">
